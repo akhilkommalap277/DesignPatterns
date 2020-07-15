@@ -10,10 +10,10 @@ public class FactoryDemo {
         shapeC.draw();
 
         Shape shapeR = shape.getShape("Rectangle");
-        shapeC.draw();
+        shapeR.draw();
 
         Shape shapeS = shape.getShape("Square");
-        shapeC.draw();
+        shapeS.draw();
 
 
     }
