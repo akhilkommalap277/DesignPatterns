@@ -16,3 +16,16 @@ need a single database connection object in an application. The Singleton patter
 is useful in such cases because it ensures that there exists one and only one
 instance of a particular object ever. Further, it suggests that client objects should
 be able to access the single instance in a consistent manner.
+
+
+Having an instance of the class in a global variable seems like an easy way to
+maintain the single instance. All client objects can access this instance in a
+consistent manner through this global variable. But this does not prevent clients
+from creating other instances of the class. For this approach to be successful, all
+of the client objects have to be responsible for controlling the number of instances
+of the class. This widely distributed responsibility is not desirable because a client
+should be free from any class creation process details. The responsibility for
+making sure that there is only one instance of the class should belong to the
+class itself, leaving client objects free from having to handle these details.
+A class that maintains its single instance nature by itself is referred to as a
+Singleton class.
